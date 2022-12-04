@@ -19,7 +19,8 @@ Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 Route::resource('Grooming', GroomingController::class);
 Route::resource('Penitipan', PenitipanController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
