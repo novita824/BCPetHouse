@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\Auth;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,8 @@ Route::post('/sesi/login', [SessionController::class, 'login']);
 Route::get('/', function () {
     return view('home');
 });
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('post-login', [AuthController::class, 'post-login'])->name('login.post');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::resource('Grooming', GroomingController::class);
 Route::resource('Penitipan', PenitipanController::class);
