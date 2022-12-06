@@ -20,10 +20,11 @@ Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'post-login'])->name('login.post');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::resource('Grooming', GroomingController::class);
 Route::resource('Penitipan', PenitipanController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
