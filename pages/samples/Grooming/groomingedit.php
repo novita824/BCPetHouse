@@ -127,7 +127,7 @@
                                         </li>
                                         <li><a href="#">Settings 2</a>
                                         </li>
-                                    </ul>
+                                    </ul> 
                                 </li>
                                 <li><a class="close-link"><i class="fa fa-close"></i></a>
                                 </li>
